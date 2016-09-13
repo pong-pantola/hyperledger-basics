@@ -161,7 +161,7 @@ func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args
 
     //convert array of bytes to string
     var srcAccountInString string //balance of source account in string
-    srcAccountInString =  string(srcAccountName)
+    srcAccountInString =  string(srcAccountBalanceInArrBytes)
     fmt.Printf("Balance of Source Account: %s\n", srcAccountInString)
 
     //convert string to integer
@@ -180,7 +180,7 @@ func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args
 
     //convert array of bytes to string
     var dstAccountInString string //balance of destination account in string
-    dstAccountInString =  string(dstAccountName)
+    dstAccountInString =  string(dstAccountBalanceInArrBytes)
     fmt.Printf("Balance of Destination Account: %s\n", dstAccountInString)
 
     var dstAccountBalance int //balance of destination account in integer
