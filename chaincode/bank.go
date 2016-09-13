@@ -188,7 +188,7 @@ func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args
 
 
     //decrease the balance of the source account by the amount to transfer
-    srcAccountBalance += amount
+    srcAccountBalance -= amount
 
     //increase the balance of destination account by the amount to transfer
     dstAccountBalance += amount
