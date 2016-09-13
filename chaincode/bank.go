@@ -172,7 +172,7 @@ func (t *SimpleChaincode) Invoke(stub *shim.ChaincodeStub, function string, args
 
     //get the balance of the destination account from the ledger using its name as the key
     var dstAccountBalanceInArrBytes []byte //balance of destination account in array of bytes
-    dstAccountBalanceInArrBytes, err = stub.GetState(srcAccountName)
+    dstAccountBalanceInArrBytes, err = stub.GetState(dstAccountName)
 
     if err != nil {
       return nil, err
